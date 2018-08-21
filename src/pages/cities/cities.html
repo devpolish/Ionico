@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cities</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let city of cities">
+    <img [src]="city.picture_uid.url" class="image__dark" (click)="goToCityPage(city.id)" />
+    <div class="card-title">{{ city.name }}</div>
+    <div class="card-subtitle">{{ city.description }}</div>
+  </ion-card>
+  
+</ion-content>
